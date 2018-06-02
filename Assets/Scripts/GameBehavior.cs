@@ -146,15 +146,21 @@ public class GameBehavior : MonoBehaviour
 
     void UpdateShroomSpawner()
     {
+        var selectedShroom = GameStats.selectedShroom;
+        if (GameStats.spores < selectedShroom.cost)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(shroomSpawnHotkey))
         {
             if (currentShroom == null)
             {
                 if (shrooms.Count > 0)
                 {
-                    currentShroom = Instantiate(shrooms[0].model);
+                    currentShroom = Instantiate(selectedShroom.model);
                     var shroomScript = currentShroom.GetComponent(typeof(ShroomBehavior)) as ShroomBehavior;
-                    shroomScript.shroom = shrooms[0];
+                    shroomScript.shroom = selectedShroom;
 
                     // Make it transparent, ignore raycast and disable collider
                     //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
@@ -190,6 +196,7 @@ public class GameBehavior : MonoBehaviour
                 //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 1f);
                 currentShroom.gameObject.layer = 0;
                 currentShroom.gameObject.GetComponent<Collider>().enabled = true;
+                GameStats.spores -= selectedShroom.cost;
                 currentShroom = null;
             }
         }

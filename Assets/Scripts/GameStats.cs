@@ -11,6 +11,8 @@ public static class GameStats {
 
 	public static int spores;
 
+    public static Shroom selectedShroom;
+
 	public static List<Wave> waves;
 
 	public static List<Shroom> shrooms;
