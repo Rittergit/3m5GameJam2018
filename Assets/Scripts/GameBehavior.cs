@@ -160,6 +160,7 @@ public class GameBehavior : MonoBehaviour
                     //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
                     //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 0.5f);
                     currentShroom.gameObject.layer = 2;
+                    currentShroom.gameObject.GetComponent<Collider>().enabled = false;
                 }
             }
             else
@@ -188,6 +189,7 @@ public class GameBehavior : MonoBehaviour
                 //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
                 //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 1f);
                 currentShroom.gameObject.layer = 0;
+                currentShroom.gameObject.GetComponent<Collider>().enabled = true;
                 currentShroom = null;
             }
         }
