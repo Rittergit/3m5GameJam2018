@@ -112,8 +112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40d61f4c365a934bbb09ba5be4632f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
   en: {fileID: 54350325757634948}
+  actualspeed: {x: 0, y: 0, z: 0}
+  actualpos: {x: 0, y: 0, z: 0}
 --- !u!135 &135399245637401418
 SphereCollider:
   m_ObjectHideFlags: 1

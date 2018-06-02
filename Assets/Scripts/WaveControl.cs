@@ -25,7 +25,7 @@ public class WaveControl : MonoBehaviour {
         if (elapsedTime >= waitTime)
         {
             Instantiate(enemy);
-            waitTime += 10;
+            waitTime += 1;
         }
     }
 }
