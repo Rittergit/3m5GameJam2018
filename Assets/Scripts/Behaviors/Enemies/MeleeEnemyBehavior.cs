@@ -65,4 +65,15 @@ public class MeleeEnemyBehavior : EnemyBehavior {
         //}
     }
 
+    void OnCollisionEnter(Collision col)
+    {
+        var colGameObj = col.gameObject;
+        if ((colGameObj.tag == "Shroom"))
+        {
+            var shroomScript = colGameObj.GetComponentInParent(typeof(ShroomBehavior)) as ShroomBehavior;
+            shroomScript.shroom.health -= this.enemy.attack;
+            Destroy(this.gameObject);
+        }
+    }
+
 }
