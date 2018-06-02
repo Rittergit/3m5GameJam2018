@@ -25,7 +25,7 @@ public class CameraController : MonoBehaviour
     {
 
         /// Mouse movement
-        if (!Input.GetMouseButton(1)) // Allows for the player to rotate the camera without also moving the camera
+        if (!Input.GetMouseButton(2)) 
         {
             if (Input.mousePosition.y <= 0)
                 transform.position -= transform.forward * cameraMoveSpeed * Time.deltaTime;
@@ -46,18 +46,18 @@ public class CameraController : MonoBehaviour
         pitch = transform.eulerAngles.x;
         yaw = transform.eulerAngles.y;
 
-        if (Input.GetMouseButton(1)) // Right mouse button down
+        if (Input.GetMouseButton(2)) // Right mouse button down
         {
             yaw += rotateH * Input.GetAxis("Mouse X");
             pitch -= rotateV * Input.GetAxis("Mouse Y");
 
-            transform.eulerAngles = new Vector3(Mathf.Clamp(pitch, minPitch, maxPitch), yaw, 0.0f); // Clamping pitch to avoid gimble lock and for possible gameplay reasons
+            transform.eulerAngles = new Vector3(Mathf.Clamp(pitch, minPitch, maxPitch), yaw, 0.0f); 
         }
 
         /// Zoom
         float fov = Camera.main.fieldOfView;
 
-        fov += Input.GetAxis("Mouse ScrollWheel") * zoomSensitivity;
+        fov -= Input.GetAxis("Mouse ScrollWheel") * zoomSensitivity;
         fov = Mathf.Clamp(fov, minFov, maxFov);
         Camera.main.fieldOfView = fov;
 
