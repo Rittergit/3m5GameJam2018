@@ -150,30 +150,44 @@ public class GameBehavior : MonoBehaviour
         {
             if (currentShroom == null)
             {
-                if(shrooms.Count > 0)
+                if (shrooms.Count > 0)
                 {
                     currentShroom = Instantiate(shrooms[0].model);
+                    var shroomScript = currentShroom.GetComponent(typeof(ShroomBehavior)) as ShroomBehavior;
+                    shroomScript.shroom = shrooms[0];
+
+                    // Make it transparent, ignore raycast and disable collider
+                    //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
+                    //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 0.5f);
+                    currentShroom.gameObject.layer = 2;
                 }
             }
             else
             {
-                Destroy(currentShroom);
+                Destroy(currentShroom.gameObject);
             }
         }
         if (currentShroom != null)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
             RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, 99999f, 1 << LayerMask.NameToLayer("Terrain")))
+            if (Physics.Raycast(ray, out hitInfo))
             {
-                currentShroom.transform.position = hitInfo.point;
-                currentShroom.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+                if (hitInfo.transform.gameObject.layer == LayerMask.NameToLayer("Terrain"))
+                {
+                    currentShroom.transform.position = hitInfo.point;
+                    currentShroom.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
+                }
             }
+
             mouseWheelRotation = Input.mouseScrollDelta.y;
             currentShroom.transform.Rotate(Vector3.up, mouseWheelRotation * 10f);
             if (Input.GetMouseButtonDown(0))
             {
+                // Make it non transparent, apply coorect layer and enable collider
+                //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
+                //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 1f);
+                currentShroom.gameObject.layer = 0;
                 currentShroom = null;
             }
         }
