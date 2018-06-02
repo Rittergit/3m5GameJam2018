@@ -176,7 +176,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &377867340
 GameObject:
@@ -262,7 +262,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!1 &593569170
 GameObject:
@@ -347,7 +347,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021960156
 GameObject:
@@ -433,7 +433,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!1 &1158729699
 GameObject:
@@ -519,7 +519,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1499096654
 GameObject:
@@ -596,12 +596,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1499096654}
-  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 6.82, z: -4.11}
+  m_LocalRotation: {x: 0.5, y: -0, z: -0, w: 0.8660254}
+  m_LocalPosition: {x: 0, y: 3.78, z: -2.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &1499096659
 MonoBehaviour:
@@ -611,15 +611,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1499096654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42f0998a3b6632143a592d5a66d59893, type: 3}
+  m_Script: {fileID: 11500000, guid: 254ae0db32f1ab24eb540cd47967c62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panSpeed: 20
-  panBorderThickness: 10
-  panLimit: {x: 50, y: 45}
-  scrollSpeed: 5
-  minY: 5
-  maxY: 80
+  cameraMoveSpeed: 5
+  minFov: 20
+  maxFov: 100
+  zoomSensitivity: 12
+  rotateH: 2
+  rotateV: 2
+  minPitch: 35
+  maxPitch: 65
 --- !u!1 &1870084650
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +706,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &2102365345
 GameObject:
@@ -791,5 +793,5 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
