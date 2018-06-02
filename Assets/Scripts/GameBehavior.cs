@@ -165,7 +165,7 @@ public class GameBehavior : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, 1 << LayerMask.NameToLayer("Terrain")))
+            if (Physics.Raycast(ray, out hitInfo, 99999f, 1 << LayerMask.NameToLayer("Terrain")))
             {
                 currentShroom.transform.position = hitInfo.point;
                 currentShroom.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
