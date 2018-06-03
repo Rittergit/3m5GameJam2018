@@ -13,6 +13,7 @@ public class CameraController : MonoBehaviour
     public float minPitch, maxPitch;
     float yaw = 0, pitch = 0;
 
+
     float yPosition;
 
     void Start()
@@ -63,5 +64,6 @@ public class CameraController : MonoBehaviour
 
         // Keeps camera at constant height
         transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
+
     }
 }
