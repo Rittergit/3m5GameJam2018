@@ -398,6 +398,32 @@ Prefab:
       propertyPath: waves.Array.data[0].enemies.Array.data[0].attack
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[0].attackspeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[0].attackrange
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[0].bullet.model
+      value: 
+      objectReference: {fileID: 4502551021625428, guid: 4a09ae14f17a05344b3f189c251c49c0,
+        type: 2}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[0].bullet.speed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[0].bullet.damage
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 768dcd7bb2fbf654db6ad45ecea3bf69, type: 2}
   m_IsPrefabParent: 0
