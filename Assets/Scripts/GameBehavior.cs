@@ -166,6 +166,9 @@ public class GameBehavior : MonoBehaviour
                     //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
                     //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 0.5f);
                     currentShroom.gameObject.layer = 2;
+                    currentShroom.gameObject.tag = "UnplacedShroom";
+                    var shroomLight = currentShroom.gameObject.GetComponentInChildren<Light>();
+                    shroomLight.intensity = shroomLight.intensity / 5;
                     currentShroom.gameObject.GetComponent<Collider>().enabled = false;
                 }
             }
@@ -195,6 +198,9 @@ public class GameBehavior : MonoBehaviour
                 //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
                 //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 1f);
                 currentShroom.gameObject.layer = 0;
+                currentShroom.gameObject.tag = "Shroom";
+                var shroomLight = currentShroom.gameObject.GetComponentInChildren<Light>();
+                shroomLight.intensity = shroomLight.intensity * 5;
                 currentShroom.gameObject.GetComponent<Collider>().enabled = true;
                 GameStats.spores -= selectedShroom.cost;
                 currentShroom = null;

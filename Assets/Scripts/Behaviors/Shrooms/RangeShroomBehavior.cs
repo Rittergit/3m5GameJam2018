@@ -18,6 +18,11 @@ public class RangeShroomBehavior : ShroomBehavior {
 	protected override void Update () {
 		base.Update ();
 
+        if(this.tag == "UnplacedShroom")
+        {
+            return;
+        }
+
         this.attackTimer -= Time.deltaTime;
         if (this.attackTimer < 0)
         {
