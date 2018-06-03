@@ -13,4 +13,5 @@ public struct Shroom {
     public float attackrange;
 	public float movementspeed;
 	public float sporeSpawnRate;
+    public float lightRange;
 }

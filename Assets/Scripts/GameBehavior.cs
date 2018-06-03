@@ -167,6 +167,30 @@ public class GameBehavior : MonoBehaviour
         }
     }
 
+    private bool isLightSourceNearPosition(Vector3 position)
+    {
+        var protheseGameObj = GameObject.FindGameObjectWithTag("Prothese");
+        var protheseScript = protheseGameObj.GetComponent(typeof(ProtheseBehavior)) as ProtheseBehavior;
+        var protheseLightRange = protheseScript.prothese.lightRange;
+        if (Vector3.Distance(position, protheseGameObj.transform.position) < protheseLightRange)
+        {
+            return true;
+        }
+
+        var shrooms = GameObject.FindGameObjectsWithTag("Shroom");
+        foreach(var shroom in shrooms)
+        {
+            var shroomScript = shroom.GetComponent(typeof(ShroomBehavior)) as ShroomBehavior;
+            var shroomLightRange = shroomScript.shroom.lightRange;
+            if (Vector3.Distance(position, shroom.transform.position) < shroomLightRange)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     void UpdateShroomSpawner()
     {
         var selectedShroom = GameStats.selectedShroom;
@@ -186,9 +210,7 @@ public class GameBehavior : MonoBehaviour
                     shroomScript.shroom = selectedShroom;
                     shroomScript.isUnplaced = true;
 
-                    // Make it transparent, ignore raycast and disable collider
-                    //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
-                    //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 0.5f);
+                    // Disable light, ignore raycast and disable collider
                     currentShroom.gameObject.layer = 2;
                     currentShroom.gameObject.tag = "UnplacedShroom";
                     var shroomLight = currentShroom.gameObject.GetComponentInChildren<Light>();
@@ -216,11 +238,15 @@ public class GameBehavior : MonoBehaviour
 
             mouseWheelRotation = Input.mouseScrollDelta.y;
             currentShroom.transform.Rotate(Vector3.up, mouseWheelRotation * 10f);
+            
             if (Input.GetMouseButtonDown(0))
             {
-                // Make it non transparent, apply coorect layer and enable collider
-                //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
-                //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 1f);
+                if(!isLightSourceNearPosition(currentShroom.transform.position))
+                {
+                    return;
+                }
+
+                // Enable light, apply coorect layer and enable collider
                 currentShroom.gameObject.layer = 0;
                 currentShroom.gameObject.tag = "Shroom";
                 var shroomLight = currentShroom.gameObject.GetComponentInChildren<Light>();
