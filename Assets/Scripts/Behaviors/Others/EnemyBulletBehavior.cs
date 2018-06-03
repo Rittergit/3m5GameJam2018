@@ -34,7 +34,7 @@ public class EnemyBulletBehavior : MonoBehaviour {
         if (colGameObj.tag == "Shroom")
         {
             var shroomScript = colGameObj.GetComponentInParent(typeof(ShroomBehavior)) as ShroomBehavior;
-            shroomScript.shroom.health -= this.bullet.damage;
+            shroomScript.shroom.currentHealth -= this.bullet.damage;
             Destroy(this.gameObject);
         }
     }

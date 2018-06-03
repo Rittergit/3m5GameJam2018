@@ -33,7 +33,7 @@ public class BulletBehavior : MonoBehaviour
         if (colGameObj.tag == "Enemy")
         {
             var enemyScript = colGameObj.GetComponentInParent(typeof(EnemyBehavior)) as EnemyBehavior;
-            enemyScript.enemy.health -= this.bullet.damage;
+            enemyScript.enemy.currentHealth -= this.bullet.damage;
             Destroy(this.gameObject);
         }
     }

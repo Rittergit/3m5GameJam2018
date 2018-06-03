@@ -8,7 +8,7 @@ public class EnemyBehavior : MonoBehaviour {
 	}
 
 	protected virtual void Update () {
-		if(this.enemy.health <= 0) {
+		if(this.enemy.currentHealth <= 0) {
 			Destroy(this.gameObject);
 		}
 	}

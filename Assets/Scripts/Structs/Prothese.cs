@@ -4,5 +4,6 @@
 public struct Prothese
 {
     public Transform model;
-    public int health;
+    public int currentHealth;
+    public int maxHealth;
 }

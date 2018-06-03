@@ -8,7 +8,7 @@ public class ProtheseBehavior : MonoBehaviour {
 	}
 
 	protected virtual void Update () {
-		if (this.prothese.health <= 0) {
+		if (this.prothese.currentHealth <= 0) {
 			Destroy (this.gameObject);
 		}
 	}

@@ -8,7 +8,7 @@ public class ShroomBehavior : MonoBehaviour {
 	}
 
 	protected virtual void Update () {
-		if (this.shroom.health <= 0) {
+		if (this.shroom.currentHealth <= 0) {
 			Destroy (this.gameObject);
 		}
 	}

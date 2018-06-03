@@ -124,7 +124,7 @@ public class RangedEnemyBehavior : EnemyBehavior {
         if ((colGameObj.tag == "Shroom"))
         {
             var shroomScript = colGameObj.GetComponentInParent(typeof(ShroomBehavior)) as ShroomBehavior;
-            shroomScript.shroom.health -= this.enemy.attack;
+            shroomScript.shroom.currentHealth -= this.enemy.attack;
             Destroy(this.gameObject);
         }
     }

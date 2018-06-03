@@ -67,13 +67,13 @@ public class MeleeEnemyBehavior : EnemyBehavior
         if (colGameObj.tag == "Shroom")
         {
             var shroomScript = colGameObj.GetComponentInParent(typeof(ShroomBehavior)) as ShroomBehavior;
-            shroomScript.shroom.health -= this.enemy.attack;
+            shroomScript.shroom.currentHealth -= this.enemy.attack;
             Destroy(this.gameObject);
         }
         else if (colGameObj.tag == "Prothese")
         {
             var protheseScript = colGameObj.GetComponentInParent(typeof(ProtheseBehavior)) as ProtheseBehavior;
-            protheseScript.prothese.health -= this.enemy.attack;
+            protheseScript.prothese.currentHealth -= this.enemy.attack;
             Destroy(this.gameObject);
         }
     }

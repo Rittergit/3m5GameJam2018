@@ -77,7 +77,7 @@ public class GameBehavior : MonoBehaviour
         var protheseScript = protheseGameObj.GetComponent(typeof(ProtheseBehavior)) as ProtheseBehavior;
         GameStats.prothese = protheseScript.prothese;
 
-        if(GameStats.prothese.health <= 0)
+        if(GameStats.prothese.currentHealth <= 0)
         {
             GameStats.state = GameStats.GameState.GameOver;
         }

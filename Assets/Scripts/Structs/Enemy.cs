@@ -5,7 +5,8 @@ public struct Enemy {
 	public Transform model;
 	public AudioClip sound;
     public Bullet bullet;
-	public int health;
+	public int currentHealth;
+    public int maxHealth;
     public int attack;
     public float attackspeed;
 	public float movementSpeed;

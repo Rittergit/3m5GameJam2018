@@ -7,8 +7,9 @@ public struct Shroom {
     public Spore spore;
 	public string name;
 	public int cost;
-	public int health;
-	public float attackspeed;
+    public int currentHealth;
+    public int maxHealth;
+    public float attackspeed;
     public float attackrange;
 	public float movementspeed;
 	public float sporeSpawnRate;
