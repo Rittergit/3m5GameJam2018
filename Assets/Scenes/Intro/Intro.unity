@@ -274,7 +274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Intro
+  m_Text: Vorgeschichte
 --- !u!222 &510838898
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.53333336, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.14509805, g: 0.1882353, b: 0.54901963, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -483,7 +483,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Blabla
+  m_Text: "Im Jahr 2100 - Eine Alien-Invasion hat die Menschheit dazu gezwungen, die
+    Erde zu verlassen. Jegliche Vegetation wurde ausgerottet, um Platz f\xFCr Alien-Brutst\xE4tten
+    zu schaffen. Um die Erde zu retten, wurde eine Prothese voll von speziellen Pilzz\xFCchtungen
+    auf den Planeten geschickt. Sollte die Prothese von den Aliens infiziert werden,
+    bedeutet dies das Ende der Erde und somit wom\xF6glich auch das Ende der gesamten
+    Menschheit!"
 --- !u!222 &1322972227
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -658,7 +663,7 @@ RectTransform:
   m_GameObject: {fileID: 1818609214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0000098, y: 1.0000098, z: 1.0000098}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 1923618758}
   m_Father: {fileID: 347394776}
@@ -918,7 +923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.53333336, g: 1, b: 0, a: 0.39215687}
+  m_Color: {r: 0.14195444, g: 0.1869784, b: 0.5471698, a: 0.9529412}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
