@@ -404,7 +404,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -414,6 +414,21 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[1].enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[2].enemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4041330456720774, guid: 768dcd7bb2fbf654db6ad45ecea3bf69, type: 2}
@@ -462,23 +477,23 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].time
-      value: 5000
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].spawnRateMin
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].spawnRateMax
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].model
       value: 
-      objectReference: {fileID: 4748658013785156, guid: 777b3b2773509d04e921068144df2568,
+      objectReference: {fileID: 4577141721111642, guid: a85f3df1fcd3a5242ac20ac69273cbb4,
         type: 2}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -503,7 +518,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].attack
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -555,12 +570,12 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].attackspeed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].movementSpeed
-      value: 3
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -596,7 +611,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[1].cost
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -616,7 +631,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[0].sporeSpawnRate
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -626,7 +641,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[0].spore.spores
-      value: 25
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -641,22 +656,22 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[1].currentHealth
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[1].maxHealth
-      value: 50
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].currentHealth
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].maxHealth
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -672,17 +687,16 @@ Prefab:
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].bullet.model
       value: 
-      objectReference: {fileID: 4310721586424458, guid: 492e3008b844e554098d4bddb737f257,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].bullet.speed
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].bullet.damage
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -697,7 +711,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[1].lightRange
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -733,17 +747,17 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[2].cost
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[2].currentHealth
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[2].maxHealth
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -758,7 +772,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[2].attackrange
-      value: 5
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -769,7 +783,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[2].bullet.damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -781,6 +795,165 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 8fee4c42d6bf341448ce6856f22d9154, type: 3}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[1].enemies.Array.data[0].model
+      value: 
+      objectReference: {fileID: 4577141721111642, guid: a85f3df1fcd3a5242ac20ac69273cbb4,
+        type: 2}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[1].enemies.Array.data[0].currentHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[1].enemies.Array.data[0].maxHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[1].enemies.Array.data[0].attack
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[1].enemies.Array.data[0].movementSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[1].enemies.Array.data[0].movementRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[1].spawnRateMin
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[1].spawnRateMax
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[1].time
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[2].enemies.Array.data[0].model
+      value: 
+      objectReference: {fileID: 4577141721111642, guid: a85f3df1fcd3a5242ac20ac69273cbb4,
+        type: 2}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[2].enemies.Array.data[0].currentHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[2].enemies.Array.data[0].maxHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[2].enemies.Array.data[0].attack
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[2].enemies.Array.data[0].movementSpeed
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[2].enemies.Array.data[0].movementRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[2].spawnRateMin
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[2].spawnRateMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[2].time
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.data[0].model
+      value: 
+      objectReference: {fileID: 4748658013785156, guid: 777b3b2773509d04e921068144df2568,
+        type: 2}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.data[0].currentHealth
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.data[0].maxHealth
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.data[0].attack
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.data[0].movementSpeed
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.data[0].movementRange
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].spawnRateMin
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].spawnRateMax
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].time
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.data[0].bullet.model
+      value: 
+      objectReference: {fileID: 4310721586424458, guid: 492e3008b844e554098d4bddb737f257,
+        type: 2}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.data[0].bullet.damage
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.data[0].bullet.speed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[3].enemies.Array.data[0].attackspeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 768dcd7bb2fbf654db6ad45ecea3bf69, type: 2}
   m_IsPrefabParent: 0
