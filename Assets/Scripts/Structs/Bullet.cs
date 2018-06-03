@@ -6,5 +6,4 @@ public struct Bullet {
 	public AudioClip sound;
 	public int damage;
 	public float speed;
-	public float range;
 }
