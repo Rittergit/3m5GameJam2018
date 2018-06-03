@@ -37,5 +37,14 @@ public class EnemyBulletBehavior : MonoBehaviour {
             shroomScript.shroom.currentHealth -= this.bullet.damage;
             Destroy(this.gameObject);
         }
+        else
+        {
+            if (colGameObj.tag == "Prothese")
+            {
+                var shroomScript = colGameObj.GetComponentInParent(typeof(ShroomBehavior)) as ShroomBehavior;
+                shroomScript.shroom.currentHealth -= this.bullet.damage;
+                Destroy(this.gameObject);
+            }
+        }
     }
 }
