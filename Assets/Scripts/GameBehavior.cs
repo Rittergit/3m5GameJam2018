@@ -214,7 +214,10 @@ public class GameBehavior : MonoBehaviour
                     currentShroom.gameObject.layer = 2;
                     currentShroom.gameObject.tag = "UnplacedShroom";
                     var shroomLight = currentShroom.gameObject.GetComponentInChildren<Light>();
-                    shroomLight.intensity = shroomLight.intensity / 5;
+                    if (shroomLight != null)
+                    {
+                        shroomLight.intensity = shroomLight.intensity / 5;
+                    }
                     currentShroom.gameObject.GetComponent<Collider>().enabled = false;
                 }
             }
@@ -250,7 +253,10 @@ public class GameBehavior : MonoBehaviour
                 currentShroom.gameObject.layer = 0;
                 currentShroom.gameObject.tag = "Shroom";
                 var shroomLight = currentShroom.gameObject.GetComponentInChildren<Light>();
-                shroomLight.intensity = shroomLight.intensity * 5;
+                if (shroomLight != null)
+                {
+                    shroomLight.intensity = shroomLight.intensity * 5;
+                }
                 currentShroom.gameObject.GetComponent<Collider>().enabled = true;
                 var shroomScript = currentShroom.GetComponent(typeof(ShroomBehavior)) as ShroomBehavior;
                 shroomScript.isUnplaced = false;
