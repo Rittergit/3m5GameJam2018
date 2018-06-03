@@ -7,6 +7,7 @@ public class GameBehavior : MonoBehaviour
 
     public int spores;
     public float waveStartDelay;
+    public Prothese prothese;
     public List<Shroom> shrooms;
     public List<Wave> waves;
     private KeyCode shroomSpawnHotkey = KeyCode.B;
@@ -22,6 +23,10 @@ public class GameBehavior : MonoBehaviour
         GameStats.state = GameStats.GameState.InGame;
         GameStats.spores = this.spores;
         GameStats.wave = -1;
+        var protheseGameObj = Instantiate(this.prothese.model);
+        var protheseScript = protheseGameObj.GetComponent(typeof(ProtheseBehavior)) as ProtheseBehavior;
+        protheseScript.prothese = this.prothese;
+        GameStats.prothese = this.prothese;
         GameStats.shrooms = this.shrooms;
         GameStats.waves = this.waves;
         this.nextWaveTime = this.waveStartDelay;
@@ -31,6 +36,7 @@ public class GameBehavior : MonoBehaviour
     void Update()
     {
         this.UpdateTimeScale();
+        this.UpdateProthese();
         this.UpdateWaves();
         this.UpdateEnemySpawner();
         this.UpdateShroomSpawner();
@@ -57,6 +63,23 @@ public class GameBehavior : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    void UpdateProthese()
+    {
+        var protheseGameObj = GameObject.FindGameObjectWithTag("Prothese");
+        if(protheseGameObj == null)
+        {
+            return;
+        }
+
+        var protheseScript = protheseGameObj.GetComponent(typeof(ProtheseBehavior)) as ProtheseBehavior;
+        GameStats.prothese = protheseScript.prothese;
+
+        if(GameStats.prothese.health <= 0)
+        {
+            GameStats.state = GameStats.GameState.GameOver;
         }
     }
 

@@ -156,7 +156,7 @@ public class InGameUIBehavior : MonoBehaviour
 			}
 		}
 #endif
-        GUILayout.Label("Wave: " + (GameStats.wave + 1).ToString() + " Spores: " + GameStats.spores.ToString());
+        GUILayout.Label("Life: " + (GameStats.prothese.health).ToString() + " Wave: " + (GameStats.wave + 1).ToString() + " Spores: " + GameStats.spores.ToString());
     }
 
     void showShroomSelection()

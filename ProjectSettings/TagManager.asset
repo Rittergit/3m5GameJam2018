@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Shroom
   - UnplacedShroom
+  - Prothese
   layers:
   - Default
   - TransparentFX

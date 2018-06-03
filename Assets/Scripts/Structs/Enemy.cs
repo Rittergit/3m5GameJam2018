@@ -8,4 +8,5 @@ public struct Enemy {
     public int attack;
     public float attackspeed;
 	public float movementSpeed;
+    public float movementRange;
 }
