@@ -417,7 +417,7 @@ Prefab:
         type: 2}
       propertyPath: shrooms.Array.data[0].bullet.model
       value: 
-      objectReference: {fileID: 4502551021625428, guid: 4a09ae14f17a05344b3f189c251c49c0,
+      objectReference: {fileID: 4609711304521092, guid: ebbc1ca1351bcb347b0005fa3ade3370,
         type: 2}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -433,8 +433,7 @@ Prefab:
         type: 2}
       propertyPath: shrooms.Array.data[0].spore.model
       value: 
-      objectReference: {fileID: 4609711304521092, guid: ebbc1ca1351bcb347b0005fa3ade3370,
-        type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 768dcd7bb2fbf654db6ad45ecea3bf69, type: 2}
   m_IsPrefabParent: 0
