@@ -7,8 +7,8 @@ public class MeleeEnemyBehavior : EnemyBehavior {
 	//private Animator animator;
 	private GameObject hittedGameObject;
 	private float attackTimer;
-    
-	protected override void Start () {
+
+    protected override void Start () {
 		base.Start ();
 
 		this.collider = GetComponentInChildren<Collider>();
@@ -17,17 +17,51 @@ public class MeleeEnemyBehavior : EnemyBehavior {
 		this.attackTimer = this.enemy.attackspeed;
     }
 
+    private Vector3 getTarget()
+    {
+        float nearestdist = 99999f;
+        //Vector3 nearestpos = new Vector3(0,0,0);
+        Transform target=null;
+        var shrooms = GameObject.FindGameObjectsWithTag("Shroom");
+        int len = shrooms.GetLength(0);
+        foreach(var shroom in shrooms)
+        {
+            var posS = shroom.transform.position;
+            var posE = this.transform.position;
+            var actualdist = Vector3.Distance(posS, posE);
+            if (actualdist < nearestdist)
+            {
+                nearestdist = actualdist;
+                target = shroom.transform;
+            }
+        }
+
+        if (nearestdist > 10)
+        {
+            target = null;
+        }
+
+        if(target == null)
+        {
+            return new Vector3(0, 0, 0);
+        }
+        else
+        {
+            return target.position;
+        }
+
+
+        
+
+    }
+
 	protected override void Update () {
 		base.Update ();
-        
-        var Target = new Vector3(0, 0, 0);
 
-        var actualpos = rigidbody.position;
-        var actualspeed = rigidbody.velocity;
-        
-        var speedvec = actualpos - Target;
-        var speed = Mathf.Sqrt(speedvec.x * speedvec.x + speedvec.y * speedvec.y);
-        rigidbody.velocity = new Vector3(-actualpos.x / speed, actualspeed.y, -actualpos.z / speed);
+        var target = getTarget();
+
+        this.transform.position = Vector3.MoveTowards(this.transform.position, target, 0.05f);
+
         //// Get Objects infront
         //var centerPos = this.collider.bounds.center;
         //var fwd = this.transform.forward;
