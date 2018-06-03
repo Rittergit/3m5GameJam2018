@@ -260,7 +260,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -308,7 +308,7 @@ Prefab:
         type: 2}
       propertyPath: shrooms.Array.data[0].model
       value: 
-      objectReference: {fileID: 4233526444542056, guid: ed2e24c60272c3842aceb6ae0bb9b227,
+      objectReference: {fileID: 4804930835696918, guid: e4486edcf5af72f42a69c13e1df9cc06,
         type: 2}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -344,7 +344,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[0].name
-      value: Lul Tower
+      value: Mine
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -359,34 +359,34 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[0].attackspeed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[0].attackrange
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[0].bullet.model
       value: 
-      objectReference: {fileID: 4609711304521092, guid: ebbc1ca1351bcb347b0005fa3ade3370,
-        type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[0].bullet.speed
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[0].bullet.damage
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: shrooms.Array.data[0].spore.model
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4089026987406892, guid: 5dbc8e9f97583484abbd0b06995b3d93,
+        type: 2}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: prothese.health
@@ -417,6 +417,68 @@ Prefab:
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].movementRange
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[1].model
+      value: 
+      objectReference: {fileID: 4233526444542056, guid: ed2e24c60272c3842aceb6ae0bb9b227,
+        type: 2}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[1].bullet.model
+      value: 
+      objectReference: {fileID: 4609711304521092, guid: ebbc1ca1351bcb347b0005fa3ade3370,
+        type: 2}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[1].bullet.damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[1].bullet.speed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[1].name
+      value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[1].cost
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[1].health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[1].attackspeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[1].attackrange
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[0].sporeSpawnRate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[0].spore.lifeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[0].spore.spores
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 768dcd7bb2fbf654db6ad45ecea3bf69, type: 2}

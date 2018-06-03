@@ -9,6 +9,7 @@ TagManager:
   - Shroom
   - UnplacedShroom
   - Prothese
+  - Spore
   layers:
   - Default
   - TransparentFX
