@@ -309,7 +309,8 @@ MonoBehaviour:
       lifeTime: 0
     name: 
     cost: 0
-    health: 0
+    currentHealth: 0
+    maxHealth: 0
     attackspeed: 0
     attackrange: 0
     movementspeed: 0
