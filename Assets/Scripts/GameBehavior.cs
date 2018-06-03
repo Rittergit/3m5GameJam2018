@@ -184,6 +184,7 @@ public class GameBehavior : MonoBehaviour
                     currentShroom = Instantiate(selectedShroom.model);
                     var shroomScript = currentShroom.GetComponent(typeof(ShroomBehavior)) as ShroomBehavior;
                     shroomScript.shroom = selectedShroom;
+                    shroomScript.isUnplaced = true;
 
                     // Make it transparent, ignore raycast and disable collider
                     //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
@@ -225,6 +226,8 @@ public class GameBehavior : MonoBehaviour
                 var shroomLight = currentShroom.gameObject.GetComponentInChildren<Light>();
                 shroomLight.intensity = shroomLight.intensity * 5;
                 currentShroom.gameObject.GetComponent<Collider>().enabled = true;
+                var shroomScript = currentShroom.GetComponent(typeof(ShroomBehavior)) as ShroomBehavior;
+                shroomScript.isUnplaced = false;
                 GameStats.spores -= selectedShroom.cost;
                 currentShroom = null;
             }

@@ -302,18 +302,18 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].spawnRateMin
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].spawnRateMax
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].model
       value: 
-      objectReference: {fileID: 4577141721111642, guid: a85f3df1fcd3a5242ac20ac69273cbb4,
+      objectReference: {fileID: 4591167692614076, guid: f98b397603a1c9848805af9628d65f83,
         type: 2}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -390,7 +390,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].attackspeed
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -503,6 +503,22 @@ Prefab:
         type: 2}
       propertyPath: prothese.maxHealth
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[0].enemies.Array.data[0].bullet.model
+      value: 
+      objectReference: {fileID: 4122937349571714, guid: 6f2b49f80196770458ee8a78b6ba4db9,
+        type: 2}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[0].enemies.Array.data[0].bullet.speed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: waves.Array.data[0].enemies.Array.data[0].bullet.damage
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 768dcd7bb2fbf654db6ad45ecea3bf69, type: 2}

@@ -3,11 +3,15 @@
 public class ShroomBehavior : MonoBehaviour {
 
 	public Shroom shroom;
-    private float healthBarLength;
+    public bool isUnplaced;
+    private bool isMouseOver;
+    private float healthBarBackgroundLength;
+    private float healthBarForegroundLength;
 
     protected virtual void Start ()
     {
-        healthBarLength = Screen.width / 15;
+        healthBarBackgroundLength = Screen.width / 15;
+        healthBarForegroundLength = healthBarBackgroundLength;
     }
 
 	protected virtual void Update () {
@@ -15,12 +19,43 @@ public class ShroomBehavior : MonoBehaviour {
 			Destroy (this.gameObject);
             return;
 		}
+
+        if(isUnplaced || !isMouseOver)
+        {
+            return;
+        }
+
+        healthBarForegroundLength = healthBarBackgroundLength * (float)((float)this.shroom.currentHealth / (float)this.shroom.maxHealth);
     }
     
-    void OnGUI()
+    protected void OnGUI()
     {
+        if(isUnplaced || !isMouseOver)
+        {
+            return;
+        }
+
         var screenPos = Camera.main.WorldToScreenPoint(this.transform.position);
-        GUI.Box(new Rect(screenPos.x - (healthBarLength / 2), Screen.height - screenPos.y, healthBarLength, 20), this.shroom.currentHealth + "/" + this.shroom.maxHealth);
+
+        var healthBarStyle = new GUIStyle(GUI.skin.box);
+        healthBarStyle.normal.background = Texture2D.whiteTexture;
+        healthBarStyle.normal.textColor = Color.white;
+        var oldguicolor = GUI.backgroundColor;
+        GUI.backgroundColor = Color.black;
+        GUI.Box(new Rect(screenPos.x - (healthBarBackgroundLength / 2), Screen.height - screenPos.y, healthBarBackgroundLength, 1), "", healthBarStyle);
+        GUI.backgroundColor = Color.green;
+        GUI.Box(new Rect(screenPos.x - (healthBarBackgroundLength / 2), Screen.height - screenPos.y, healthBarForegroundLength, 1), "", healthBarStyle);
+        GUI.backgroundColor = oldguicolor;
+    }
+
+    protected void OnMouseOver()
+    {
+        this.isMouseOver = true;
+    }
+
+    protected void OnMouseExit()
+    {
+        this.isMouseOver = false;
     }
 
 }
