@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33187235352703208}
   - component: {fileID: 23035630366299960}
   m_Layer: 0
-  m_Name: Alien_Fernkampf
+  m_Name: RangedEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

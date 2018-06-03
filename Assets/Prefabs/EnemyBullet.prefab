@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33517630218537854}
   - component: {fileID: 23736604751235380}
   m_Layer: 0
-  m_Name: "Antik\xF6rper"
+  m_Name: EnemyBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
