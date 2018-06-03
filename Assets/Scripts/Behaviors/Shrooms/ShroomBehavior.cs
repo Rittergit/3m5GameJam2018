@@ -7,7 +7,6 @@ public class ShroomBehavior : MonoBehaviour {
     private bool isMouseOver;
     private float healthBarBackgroundLength;
     private float healthBarForegroundLength;
-    //private GUIStyle healthBarStyle;
 
     protected virtual void Start ()
     {
@@ -37,7 +36,6 @@ public class ShroomBehavior : MonoBehaviour {
         }
 
         var screenPos = Camera.main.WorldToScreenPoint(this.transform.position);
-        //GUI.Box(new Rect(screenPos.x - (healthBarLength / 2), Screen.height - screenPos.y, healthBarLength, 20), this.shroom.currentHealth + "/" + this.shroom.maxHealth);
 
         var healthBarStyle = new GUIStyle(GUI.skin.box);
         healthBarStyle.normal.background = Texture2D.whiteTexture;
