@@ -46,12 +46,17 @@ public class RangedEnemyBehavior : EnemyBehavior
 
         if (target == null)
         {
-            return GameObject.FindGameObjectWithTag("Prothese").transform;
+            var prothese = GameObject.FindGameObjectWithTag("Prothese");
+            if (prothese != null)
+            {
+                return prothese.transform;
+            } else
+            {
+                return null;
+            }
         }
-        else
-        {
-            return target;
-        }
+
+        return target;
     }
 
     protected override void Update()
@@ -59,6 +64,11 @@ public class RangedEnemyBehavior : EnemyBehavior
         base.Update();
 
         var target = getTarget();
+        if (target == null)
+        {
+            Destroy(this.transform.gameObject);
+            return;
+        }
 
         if (Vector3.Distance(target.position, this.transform.position) < 6)
         {
@@ -75,8 +85,8 @@ public class RangedEnemyBehavior : EnemyBehavior
         }
         else
         {
-            this.transform.position = Vector3.MoveTowards(this.transform.position, target.position, 0.05f);
+            this.transform.position = Vector3.MoveTowards(this.transform.position, target.position, this.enemy.movementSpeed);
         }
     }
-    
+
 }

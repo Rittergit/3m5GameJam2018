@@ -260,6 +260,11 @@ public class GameBehavior : MonoBehaviour
                 currentShroom.gameObject.GetComponent<Collider>().enabled = true;
                 var shroomScript = currentShroom.GetComponent(typeof(ShroomBehavior)) as ShroomBehavior;
                 shroomScript.isUnplaced = false;
+
+                // Play Sound
+                var audioSource = currentShroom.GetComponent<AudioSource>();
+                audioSource.Play();
+
                 GameStats.spores -= selectedShroom.cost;
                 currentShroom = null;
             }

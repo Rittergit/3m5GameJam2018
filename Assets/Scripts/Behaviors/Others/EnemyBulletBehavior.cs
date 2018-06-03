@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBulletBehavior : MonoBehaviour {
+public class EnemyBulletBehavior : MonoBehaviour
+{
 
     public Bullet bullet;
     public Transform target;
@@ -37,14 +38,11 @@ public class EnemyBulletBehavior : MonoBehaviour {
             shroomScript.shroom.currentHealth -= this.bullet.damage;
             Destroy(this.gameObject);
         }
-        else
+        else if (colGameObj.tag == "Prothese")
         {
-            if (colGameObj.tag == "Prothese")
-            {
-                var shroomScript = colGameObj.GetComponentInParent(typeof(ShroomBehavior)) as ShroomBehavior;
-                shroomScript.shroom.currentHealth -= this.bullet.damage;
-                Destroy(this.gameObject);
-            }
+            var protheseScript = colGameObj.GetComponentInParent(typeof(ProtheseBehavior)) as ProtheseBehavior;
+            protheseScript.prothese.currentHealth -= this.bullet.damage;
+            Destroy(this.gameObject);
         }
     }
 }

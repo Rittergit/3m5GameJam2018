@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4173294154787290}
   - component: {fileID: 33757973814153298}
   - component: {fileID: 23450650647299810}
+  - component: {fileID: 114613178589219862}
   m_Layer: 0
   m_Name: "Str\xF6mungskanal"
-  m_TagString: Untagged
+  m_TagString: EnemySpawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1900571502156648}
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0.000000015454312, w: 0.000000015454312}
-  m_LocalPosition: {x: -0.019828064, y: 0, z: -0.052346338}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,3 +84,14 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1900571502156648}
   m_Mesh: {fileID: 4300000, guid: 02f0657b56ba6e14e94fb87edaa0e9ae, type: 3}
+--- !u!114 &114613178589219862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1900571502156648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d488c97133c63584381008f4b3b2e228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
