@@ -7,6 +7,7 @@ public class GameBehavior : MonoBehaviour
 
     public int spores;
     public float waveStartDelay;
+    public Prothese prothese;
     public List<Shroom> shrooms;
     public List<Wave> waves;
     private KeyCode shroomSpawnHotkey = KeyCode.B;
@@ -22,6 +23,10 @@ public class GameBehavior : MonoBehaviour
         GameStats.state = GameStats.GameState.InGame;
         GameStats.spores = this.spores;
         GameStats.wave = -1;
+        var protheseGameObj = Instantiate(this.prothese.model);
+        var protheseScript = protheseGameObj.GetComponent(typeof(ProtheseBehavior)) as ProtheseBehavior;
+        protheseScript.prothese = this.prothese;
+        GameStats.prothese = this.prothese;
         GameStats.shrooms = this.shrooms;
         GameStats.waves = this.waves;
         this.nextWaveTime = this.waveStartDelay;
@@ -31,6 +36,7 @@ public class GameBehavior : MonoBehaviour
     void Update()
     {
         this.UpdateTimeScale();
+        this.UpdateProthese();
         this.UpdateWaves();
         this.UpdateEnemySpawner();
         this.UpdateShroomSpawner();
@@ -57,6 +63,23 @@ public class GameBehavior : MonoBehaviour
                 break;
             default:
                 break;
+        }
+    }
+
+    void UpdateProthese()
+    {
+        var protheseGameObj = GameObject.FindGameObjectWithTag("Prothese");
+        if(protheseGameObj == null)
+        {
+            return;
+        }
+
+        var protheseScript = protheseGameObj.GetComponent(typeof(ProtheseBehavior)) as ProtheseBehavior;
+        GameStats.prothese = protheseScript.prothese;
+
+        if(GameStats.prothese.health <= 0)
+        {
+            GameStats.state = GameStats.GameState.GameOver;
         }
     }
 
@@ -166,6 +189,9 @@ public class GameBehavior : MonoBehaviour
                     //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
                     //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 0.5f);
                     currentShroom.gameObject.layer = 2;
+                    currentShroom.gameObject.tag = "UnplacedShroom";
+                    var shroomLight = currentShroom.gameObject.GetComponentInChildren<Light>();
+                    shroomLight.intensity = shroomLight.intensity / 5;
                     currentShroom.gameObject.GetComponent<Collider>().enabled = false;
                 }
             }
@@ -195,6 +221,9 @@ public class GameBehavior : MonoBehaviour
                 //var shroomColor = currentShroom.gameObject.GetComponent<Renderer>().material.color;
                 //currentShroom.gameObject.GetComponent<Renderer>().material.color = new Color(shroomColor.r, shroomColor.g, shroomColor.b, 1f);
                 currentShroom.gameObject.layer = 0;
+                currentShroom.gameObject.tag = "Shroom";
+                var shroomLight = currentShroom.gameObject.GetComponentInChildren<Light>();
+                shroomLight.intensity = shroomLight.intensity * 5;
                 currentShroom.gameObject.GetComponent<Collider>().enabled = true;
                 GameStats.spores -= selectedShroom.cost;
                 currentShroom = null;

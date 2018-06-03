@@ -13,7 +13,7 @@ public class SporeBehavior : MonoBehaviour {
 			audio.Play ();
 		}
 
-		Destroy (this.gameObject, this.spore.lifeTime);
+		Destroy(this.gameObject, this.spore.lifeTime);
 	}
 
 }

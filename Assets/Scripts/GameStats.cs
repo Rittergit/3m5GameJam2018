@@ -13,6 +13,8 @@ public static class GameStats {
 
     public static Shroom selectedShroom;
 
+    public static Prothese prothese;
+
 	public static List<Wave> waves;
 
 	public static List<Shroom> shrooms;
