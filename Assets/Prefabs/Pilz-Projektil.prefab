@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4609711304521092}
   - component: {fileID: 33891545355515878}
   - component: {fileID: 23868194536915080}
+  - component: {fileID: 54119900737602634}
   - component: {fileID: 65227788433110972}
   - component: {fileID: 114626990546373716}
-  - component: {fileID: 54119900737602634}
   m_Layer: 0
   m_Name: Pilz-Projektil
   m_TagString: Untagged

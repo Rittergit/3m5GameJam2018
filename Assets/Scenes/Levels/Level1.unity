@@ -313,7 +313,7 @@ Prefab:
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].model
       value: 
-      objectReference: {fileID: 4577141721111642, guid: a85f3df1fcd3a5242ac20ac69273cbb4,
+      objectReference: {fileID: 4748658013785156, guid: 777b3b2773509d04e921068144df2568,
         type: 2}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -338,7 +338,7 @@ Prefab:
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].attack
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -508,16 +508,17 @@ Prefab:
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].bullet.model
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4310721586424458, guid: 492e3008b844e554098d4bddb737f257,
+        type: 2}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].bullet.speed
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
       propertyPath: waves.Array.data[0].enemies.Array.data[0].bullet.damage
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
         type: 2}
@@ -546,7 +547,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4001339581503484, guid: 8d108a89d72f7094c9b5901a1d20ebd9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 142
+      value: 21.7
       objectReference: {fileID: 0}
     - target: {fileID: 4001339581503484, guid: 8d108a89d72f7094c9b5901a1d20ebd9, type: 2}
       propertyPath: m_LocalPosition.y
@@ -554,7 +555,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4001339581503484, guid: 8d108a89d72f7094c9b5901a1d20ebd9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -138
+      value: -51.9
       objectReference: {fileID: 0}
     - target: {fileID: 4001339581503484, guid: 8d108a89d72f7094c9b5901a1d20ebd9, type: 2}
       propertyPath: m_LocalRotation.x

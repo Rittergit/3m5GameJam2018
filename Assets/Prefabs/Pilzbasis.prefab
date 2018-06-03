@@ -219,11 +219,13 @@ MonoBehaviour:
       sound: {fileID: 0}
       damage: 0
       speed: 0
-    health: 0
+    currentHealth: 0
+    maxHealth: 0
     attack: 0
     attackspeed: 0
     movementSpeed: 0
     movementRange: 0
+  isUnplaced: 0
 --- !u!114 &114516345384661668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -243,8 +245,10 @@ MonoBehaviour:
       sound: {fileID: 0}
       damage: 0
       speed: 0
-    health: 0
+    currentHealth: 0
+    maxHealth: 0
     attack: 0
     attackspeed: 0
     movementSpeed: 0
     movementRange: 0
+  isUnplaced: 0
