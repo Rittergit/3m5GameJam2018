@@ -429,6 +429,12 @@ Prefab:
       propertyPath: shrooms.Array.data[0].bullet.damage
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114323923221162868, guid: 768dcd7bb2fbf654db6ad45ecea3bf69,
+        type: 2}
+      propertyPath: shrooms.Array.data[0].spore.model
+      value: 
+      objectReference: {fileID: 4609711304521092, guid: ebbc1ca1351bcb347b0005fa3ade3370,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 768dcd7bb2fbf654db6ad45ecea3bf69, type: 2}
   m_IsPrefabParent: 0
