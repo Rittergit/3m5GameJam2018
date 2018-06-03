@@ -46,7 +46,7 @@ public class RangedEnemyBehavior : EnemyBehavior {
 
         if (target == null)
         {
-            return GameObject.FindGameObjectWithTag("Player").transform;
+            return GameObject.FindGameObjectWithTag("Prothese").transform;
         }
         else
         {
@@ -67,8 +67,6 @@ public class RangedEnemyBehavior : EnemyBehavior {
         {
             this.transform.position = Vector3.MoveTowards(this.transform.position, target.position, 0.05f);
         }
-
-            
 
         return;
     }
@@ -121,11 +119,9 @@ public class RangedEnemyBehavior : EnemyBehavior {
     void OnCollisionEnter(Collision col)
     {
         var colGameObj = col.gameObject;
-        if ((colGameObj.tag == "Shroom"))
-        {
             var shroomScript = colGameObj.GetComponentInParent(typeof(ShroomBehavior)) as ShroomBehavior;
             shroomScript.shroom.currentHealth -= this.enemy.attack;
             Destroy(this.gameObject);
-        }
+        
     }
 }
